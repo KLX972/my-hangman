@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MyHangman</title>
+    <link href="hangman.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@next"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <h3 class="my-title">Jeux du pendu</h3>
+        <div class="letter-to-test-content">
+          <label for="letter">Lettre : </label>
+          <input type="text" name="letter" id="letter" v-model="letter">
+        </div>
+        <div class="submit-button" @click="testLetter()">
+          <p>Essayer !</p>
+        </div>
+      <div class="my-word-to-find-content">
+        <div class="my-word-to-find" v-for="item in myHiddenWord ">
+          {{ item}}
+        </div>
+      </div>
+      <button type="button" name="button" @click="chooseWord()" class="my-word-button">Changer de mot</button>
+
+
+
+    </div>
+
+    <script src="hangman.js" charset="utf-8"></script>
+  </body>
+
+</html>

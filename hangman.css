@@ -1,0 +1,16 @@
+.my-title{
+  font-size: 60px;
+  text-align: center;
+  color: #60cabc;
+}
+.my-word-to-find-content{
+  display: flex;
+  justify-content: center;
+}
+.my-word-to-find{
+  font-size: 100px;
+  text-align: center;
+  color: #3e3e3e;
+  padding-left: 15px;
+  padding-right: 15px;
+}
