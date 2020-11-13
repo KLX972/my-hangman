@@ -10,22 +10,44 @@
   <body>
     <div id="app">
       <h3 class="my-title">Jeux du pendu</h3>
-        <div class="letter-to-test-content">
-          <label for="letter">Lettre : </label>
-          <input type="text" name="letter" id="letter" v-model="letter">
+      <div class="hangman">
+        <div class="word-content">
+          <div class="test-letter-content">
+            <div class="letter-to-test-content">
+              <label for="letter" class="label-letter">Lettre : </label>
+              <input type="text" name="letter" id="letter" v-model="myLetter" class="input-letter" @input="upper($event)" ref="test">
+            </div>
+            <div class="submit-button" @click="testLetter()">
+              <p class="submit-button-text">Essayer !</p>
+            </div>
+          </div>
+          <div class="my-word-to-find-content">
+            <div class="my-word-to-find" v-for="item in myHiddenWord ">
+              {{ item }}
+            </div>
+          </div>
         </div>
-        <div class="submit-button" @click="testLetter()">
-          <p>Essayer !</p>
-        </div>
-      <div class="my-word-to-find-content">
-        <div class="my-word-to-find" v-for="item in myHiddenWord ">
-          {{ item}}
+        <div class="hangman-content">
+          <div class="hangman-picture-content">
+            <img :src="'images/Hangman-' + picture + '.png'" alt="hangman">
+          </div>
         </div>
       </div>
-      <button type="button" name="button" @click="chooseWord()" class="my-word-button">Changer de mot</button>
+      <div class="testedLetterscontent">
+        <p class="tested-letters-title">Lettre essayées :</p>
+        <div class="tested-letters">
+          <div class="tested-letter-content" v-for="item in testedLetters">
+            <p class="tested-letter">{{item}}</p>
+          </div>
+        </div>
 
+      </div>
 
-
+      <div class="event" :style="victory == true || victory == false ? 'display: flex;' : 'display: none;'">
+        <p class="victory" v-if="victory == true">Victoire !</p>
+        <p class="lose" v-else="victory == false">Perdu !!</p>
+        <button type="button" name="button" @click="init()" class="reinit-button">Recommencer</button>
+      </div>
     </div>
 
     <script src="hangman.js" charset="utf-8"></script>

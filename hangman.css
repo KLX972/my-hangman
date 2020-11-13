@@ -1,16 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .my-title{
   font-size: 60px;
+  font-family: 'Fredoka One', cursive;
   text-align: center;
   color: #60cabc;
+}
+.hangman{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+.word-content{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hangman-content{
+  width: 40%;
+  display: flex;
 }
 .my-word-to-find-content{
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+}
+.hangman-picture-content{
+  width: 40%;
 }
 .my-word-to-find{
-  font-size: 100px;
+  font-size: 70px;
   text-align: center;
   color: #3e3e3e;
   padding-left: 15px;
   padding-right: 15px;
+}
+.test-letter-content{
+  display: flex;
+}
+.submit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+  border-radius: 20px;
+  background-color: #60cabc;
+  padding: 20px;
+  margin-left: 70px;
+}
+.submit-button:hover{
+  cursor: pointer;
+}
+.submit-button-text{
+  font-family: 'Fredoka One', cursive;
+  font-size: 25px;
+  color: white;
+}
+.label-letter{
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  margin-right: 25px;
+
+}
+.input-letter{
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 5px solid #60cabc;
+  font-family: 'Fredoka One', cursive;
+}
+.event{
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8)
+}
+.victory{
+  font-family: 'Modak', cursive ;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-size: 150px;
+  color: #60cabc
+}
+.lose{
+  font-family: 'Modak', cursive ;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-size: 150px;
+  color: #FA5F8C;
+}
+.reinit-button{
+  font-family: 'Fredoka One', cursive;
+  font-size: 40px;
+  background-color: #07B8CC;
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  border-color: #07B8CC;
+}
+.reinit-button:hover{
+  cursor: pointer;
+}
+.testedLetterscontent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  min-height: 47px;
+}
+.tested-letters-title{
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  margin-right: 20px;
+  color: #60cabc
+}
+.tested-letters{
+  display: flex;
+}
+.tested-letter-content{
+  border: 1px solid #60cabc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.tested-letter{
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
 }
