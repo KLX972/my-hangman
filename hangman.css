@@ -39,9 +39,15 @@ p{
 .my-word-to-find{
   font-size: 70px;
   text-align: center;
-  color: #3e3e3e;
+  /* color: #3e3e3e; */
   padding-left: 15px;
   padding-right: 15px;
+}
+.finded{
+  color: #3e3e3e;
+}
+.no-finded{
+  color: #FA5F8C;
 }
 .test-letter-content{
   display: flex;

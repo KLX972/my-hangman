@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>MyHangman</title>
     <link href="hangman.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://unpkg.com/vue@next"></script>
 
   </head>
   <body>
     <div id="app">
-      <h3 class="my-title">Jeux du pendu</h3>
+      <h3 class="my-title animate__animated animate__rubberBand">Jeux du pendu</h3>
       <div class="hangman">
         <div class="word-content">
           <div class="test-letter-content">
@@ -22,14 +23,14 @@
             </div>
           </div>
           <div class="my-word-to-find-content">
-            <div class="my-word-to-find" v-for="item in myHiddenWord ">
+            <div class="my-word-to-find" :class="testFindedLetter(item) && victory === false ? 'finded' : !testFindedLetter(item) && victory === false ? 'no-finded' : '' " v-for="item in myHiddenWord ">
               {{ item }}
             </div>
           </div>
         </div>
         <div class="hangman-content">
           <div class="hangman-picture-content">
-            <img :src="'images/Hangman-' + picture + '.png'" alt="hangman">
+            <img :src="'images/Hangman-' + picture + '.png'" alt="hangman" class="hangman-img">
           </div>
         </div>
       </div>
